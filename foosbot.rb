@@ -30,7 +30,10 @@ bot = Cinch::Bot.new do
         m.reply "game ready: #{@players.join(', ')}"
         @players = []
         @game = false
-        m.reply "kthxbye" if Random.new.rand(0..4) == 0
+        case Random.new.rand(0..4)
+        when 0 then m.reply "kthxbye"
+        when 1 then m.reply "Hiyooooo!"
+        end
       end
     end
   end
