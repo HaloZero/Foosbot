@@ -58,16 +58,8 @@ bot = Cinch::Bot.new do
     m.reply "chuck testa" if Random.new.rand(0..3) == 0
   end
 
-  on :message, /yes|always|never|definitely/ do |m|
-    m.reply "well that's just like, you're opinion man" if Random.new.rand(0..2) == 0
-  end
-
-  on :message, /[Y|y]eah/ do |m|
-    m.reply "well that's just like, your opinion man" if Random.new.rand(0..5) == 0
-  end
-
   on :message, /banana/ do |m|
-    m.reply "hillarious!"
+    m.reply "stfu"
   end
 
   on :message, /confused/ do |m|
