@@ -133,10 +133,6 @@ _-_-_-_-_-_-_-\"\"  \"\"      "
     m.reply "（╯°□°）╯︵ ┻━┻"
   end
 
-  on :message, /((h|H)i|(h|H)ey|(s|S)up|(y|Y)o|(h|H)ello) foosbot/ do |m|
-    m.reply "Hello? Yes this is foosbot"
-  end
-
   on :message, /why/ do |m|
     m.reply "42" if Random.new.rand(0..2) == 0
   end
