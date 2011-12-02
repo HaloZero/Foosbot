@@ -1,4 +1,5 @@
 require 'cinch'
+require 'cleverbot'
 
 bot = Cinch::Bot.new do
   configure do |c|
@@ -12,6 +13,7 @@ bot = Cinch::Bot.new do
     @game = false
     @players = []
     @blacklist = ['foosbot', 'matt', 'matt_', 'Kyle', 'Kyle_']
+    @cleverbot = Cleverbot::Client.new
   end
 
   on :message, "!foos" do |m|
@@ -92,6 +94,9 @@ bot = Cinch::Bot.new do
     end
   end
 
+  on :message, /foosbot/ do |m|
+    params = m.reply @cleverbot.write m.message
+  end
 end
 
 bot.start
