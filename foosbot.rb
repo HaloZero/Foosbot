@@ -86,7 +86,7 @@ bot = Cinch::Bot.new do
     case Random.new.rand(0..6)
     when 0 then m.reply "Hiyooooo!"
     when 1 then m.reply "stfu"
-    else m.reply "Hilarious!" 
+    else m.reply "Hilarious!"
     end
   end
 
@@ -119,14 +119,22 @@ bot = Cinch::Bot.new do
   end
 
   on :message, /nyan/ do |m|
-    m.reply "-_-_-_-_-_-_-_,------,  
-_-_-_-_-_-_-_-|   /\\_/\\  
--_-_-_-_-_-_-~|__( ^ .^) 
+    m.reply "-_-_-_-_-_-_-_,------,
+_-_-_-_-_-_-_-|   /\\_/\\
+-_-_-_-_-_-_-~|__( ^ .^)
 _-_-_-_-_-_-_-\"\"  \"\"      "
   end
 
   on :message, "!flip" do |m|
     m.reply "（╯°□°）╯︵ ┻━┻"
+  end
+
+  on :message, "!unflip" do |m|
+    m.reply "┬─┬ ﻿ノ( ゜-゜ノ)"
+  end
+
+  on :message, "!sup" do |m|
+    m.reply "¯\_(ツ)_/¯"
   end
 
   on :message, /desk\ flip|deskflip|flip\ a\ desk/ do |m|
